@@ -1,0 +1,154 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+h1.modern-font {
+    font-size: 2rem;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+nav a:hover {
+    transform: scale(1.1); /* Hover animation */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('../images/heroo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Add the overlay using a pseudo-element */
+.hero::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.3); /* Adjust the opacity as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #eee;
+    margin: 1rem 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #555; /* Darker on hover */
+}
+
+/* Portfolio Section Styles */
+.portfolio {
+    background-color: #f0f0f0;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.app-card-container {
+    display: flex;
+    margin: -1rem; /* Negative margin to offset the individual card margins */
+}
+
+.app-card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    margin: 1rem; /* Adjust the margin for spacing between cards */
+    max-width: calc(33.33% - 2rem); /* Ensure cards don't exceed 100% width */
+    flex: 1; /* Allow cards to shrink equally */
+    box-sizing: border-box;
+}
+
+.app-card img {
+    max-width: 100%;
+    height: 50%; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio and crop if needed */
+}
+
+.app-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 1rem 0;
+}
+
+.app-card p {
+    font-size: 1rem;
+    color: #666;
+}
